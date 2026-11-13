@@ -1,0 +1,40 @@
+
+### PRUEBA 1 - CREAR VEHÍCULO
+POST http://127.0.0.1:8000/api/vehiculos/
+Content-Type: application/json
+
+{
+  "marca": "Honda",
+  "modelo": "Civic",
+  "anio": 2024,
+  "color": "Negro"
+}
+
+### PRUEBA 2 - LISTAR VEHÍCULOS
+GET http://127.0.0.1:8000/api/vehiculos/
+
+### PRUEBA 3 - CONSULTAR POR ID
+GET http://127.0.0.1:8000/api/vehiculos/2/
+
+### PRUEBA 4 - ACTUALIZAR VEHÍCULO
+PUT http://127.0.0.1:8000/api/vehiculos/1/
+Content-Type: application/json
+
+{
+  "marca": "Toyota",
+  "modelo": "Eco",
+  "anio": 2025,
+  "color": "Rojo"
+}
+
+### PRUEBA 5 - DATOS INVÁLIDOS
+POST http://127.0.0.1:8000/api/vehiculos/
+Content-Type: application/json
+
+{
+  "marca": "Honda",
+  "anio": 2021
+}
+
+### PRUEBA 6 - ELIMINAR VEHÍCULO
+DELETE http://127.0.0.1:8000/api/vehiculos/1/
